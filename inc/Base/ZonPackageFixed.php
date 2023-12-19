@@ -1,5 +1,4 @@
 <?php 
-
 /**
  * @package  ZonPackages
  */
@@ -100,22 +99,20 @@ class ZonPackageFixed extends BaseController {
 	}
 
 public function zon_fixed_boxess() {
-	{
-		 global $post;
+	global $post;
     if ( 'page' == $post->post_type && 0 != count( get_page_templates( $post ) ) && get_option( 'page_for_posts' ) != $post->ID ) {
          if( $my_conditions )
              $post->page_template = "page-mytemplate.php";
     }
-		add_meta_box(
-			'fixed_box',                       // Unique ID
-			'Room Bookings',                             // Box title
-			array( $this, 'zon_featuress_boxx' ),      // Content callback, must be of type callable
-			'fixedpackages',                              // 
-			'normal',
-			'high'
-		);
+	add_meta_box(
+		'fixed_box',                       // Unique ID
+		'Room Bookings',                             // Box title
+		 array( $this, 'zon_featuress_boxx' ),      // Content callback, must be of type callable
+		'fixedpackages',                              // 
+		'normal',
+		'high'
+	);
 
-	}
 }
 
 

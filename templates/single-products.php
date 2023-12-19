@@ -1,7 +1,8 @@
 <?php
 function mypage_head() {
     echo '<link rel="stylesheet" type="text/css" href="'.plugin_dir_url( __FILE__ ) . '/package/template-style/package-style.css">'."\n";
-}
+    echo '<script src="'.plugin_dir_url( __FILE__ ) . 'main.js"></script>'."\n";
+  }
 add_action('wp_head', 'mypage_head');
 
 
@@ -79,7 +80,7 @@ get_header(); ?>
 
 
   <div class="field-container">
-    <input type="date" class="field-input" placeholder="Date" id="datepicker" name="date" required>
+    <input type="date" class="field-input" placeholder="Date" id="calendar" name="date" required>
     <small class="field-msg error" data-error="invalidDate">The Date is not valid</small>
   </div> 
 

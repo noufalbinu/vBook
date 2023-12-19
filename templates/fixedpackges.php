@@ -1,7 +1,9 @@
 <?php get_header(); 
 
 
+
     echo '<link rel="stylesheet" type="text/css" href="'.plugin_dir_url( __FILE__ ) . '/package/template-style/package-style.css">'."\n";
+    echo '<script src="'. plugins_url('/main.js"', __DIR__ ). '></script>'."\n";
 ?>
 
 
@@ -227,7 +229,7 @@ switch ($dataoption) {
   </div>
 
   <div class="field-container">
-    <input type="date" class="field-input" placeholder="Date" id="datepicker" name="date" required>
+    <input type="date" class="field-input" id="calendar" placeholder="Date" id="" name="date" required>
     <small class="field-msg error" data-error="invalidDate">The Date is not valid</small>
   </div>
 

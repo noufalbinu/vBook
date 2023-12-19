@@ -6,7 +6,6 @@ namespace Inc\Base;
 use Inc\Api\SettingsApi;
 use Inc\Base\BaseController;
 use Inc\Api\Callbacks\TestimonialCallbacks;
-
 /**
 * 
 */

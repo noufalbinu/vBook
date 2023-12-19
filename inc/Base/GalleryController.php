@@ -11,6 +11,7 @@ use Inc\Api\Callbacks\AdminCallbacks;
 /**
 * 
 */
+#[\AllowDynamicProperties]
 class GalleryController extends BaseController
 {
 	public $callbacks;
