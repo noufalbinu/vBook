@@ -14,8 +14,8 @@ class BaseController
 		$this->plugin_url = plugin_dir_url( dirname( __FILE__, 2 ) );
 		$this->plugin = plugin_basename( dirname( __FILE__, 3 ) ) . '/zon_packages.php';
 		$this->managers = array(
-
-			'testimonial_manager' => 'Activate Zon Package Manager',			
+			'testimonial_manager' => 'Activate Zon Package Manager',
+			'Accommodation' => 'Activate Accommodation',			
 			'fixed_packages' => 'Activate Fixed Package Departure',
 			'taxonomy_manager' => 'Activate Taxonomy Manager',
 			'media_widget' => 'Activate Media Widget',
@@ -26,7 +26,6 @@ class BaseController
 			'payment_manager' => 'Activate Payment Manager',
 			'chat_manager' => 'Activate Chat Manager',
 			'cpt_manager' => 'Activate CPT Manager',
-
 		);
 	}
 	public function activated( string $key )

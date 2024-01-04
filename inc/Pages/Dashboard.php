@@ -69,7 +69,7 @@ class Dashboard extends BaseController
 		$args = array(
 			array(
 				'id' => 'zon_admin_index',
-				'title' => 'Settings Manager',
+				'title' => 'Activate/Deactivate vBook Modules',
 				'callback' => array( $this->callbacks_mngr, 'adminSectionManager' ),
 				'page' => 'zon_packages'
 			)

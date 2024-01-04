@@ -3,7 +3,7 @@
 
 
     echo '<link rel="stylesheet" type="text/css" href="'.plugin_dir_url( __FILE__ ) . '/package/template-style/package-style.css">'."\n";
-    echo '<script src="'. plugins_url('/main.js"', __DIR__ ). '></script>'."\n";
+    echo '<script type="module" src="'. plugins_url('/air-datepicker.js"', __DIR__ ). '></script>'."\n";
 ?>
 
 
@@ -229,7 +229,7 @@ switch ($dataoption) {
   </div>
 
   <div class="field-container">
-    <input type="date" class="field-input" id="calendar" placeholder="Date" id="" name="date" required>
+    <input type="text" class="field-input" id="my-element" placeholder="Date" id="" name="date" required>
     <small class="field-msg error" data-error="invalidDate">The Date is not valid</small>
   </div>
 
@@ -247,36 +247,17 @@ switch ($dataoption) {
 </div>
 </div>
 
+<!---- Calendar Popup Container ----->
+<!---- Calendar Popup Container End ----->   
 
 
 
 
 <script>
-
-
-var input = document.getElementById("datepicker");
-      var today = new Date();
-      var day = today.getDate();
-      // Set month to string to add leading 0
-      var mon = new String(today.getMonth()+1); //January is 0!
-      var yr = today.getFullYear();
-      
-        if(mon.length < 2) { mon = "0" + mon; }
-      
-        var date = new String( yr + '-' + mon + '-' + day );
-      
-      input.disabled = false; 
-input.setAttribute('min', date);
-
-  </script>
-
-
-
-<script>
-jQuery(".chb").change(function() {
-    jQuery(".chb").prop('checked', false);
-    jQuery(this).prop('checked', true);
-});
+  jQuery(".chb").change(function() {
+      jQuery(".chb").prop('checked', false);
+      jQuery(this).prop('checked', true);
+  });
 </script>
 
 <script>

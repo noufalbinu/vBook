@@ -18,6 +18,7 @@ final class Init
 			Pages\Dashboard::class,
 			Base\Enqueue::class,
 			Base\SettingsLinks::class,
+			Base\Accommodation::class,
 			Base\CustomPostTypeController::class,
 			Base\CustomTaxonomyController::class,
 			Base\WidgetController::class,

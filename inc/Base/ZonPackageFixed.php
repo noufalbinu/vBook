@@ -45,9 +45,9 @@ class ZonPackageFixed extends BaseController {
 	public function custom_post_type() 
 	{
 		$labels = array(
-			'name' => ( 'fixedpackages' ),
-			'singular_name'         => _x( 'fixedpackages', 'Post Type Singular Name', 'text_domain' ),
-			'menu_name'             => __( 'Fixed packages', 'text_domain' ),
+			'name' => ( 'Packages' ),
+			'singular_name'         => _x( 'Fixed Packages', 'Post Type Singular Name', 'text_domain' ),
+			'menu_name'             => __( 'Packages', 'text_domain' ),
 			'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
 			'archives'              => __( 'Item Archives', 'text_domain' ),
 			'attributes'            => __( 'Item Attributes', 'text_domain' ),

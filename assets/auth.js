@@ -52,29 +52,22 @@ document.addEventListener('DOMContentLoaded', function(e) {
         })
         .then(response => {
             resetMessages();
-
             if(response === 0 || !response.status) {
                 status.innerHTML = response.message;
                 status.classList.add('error');
                 return;
             }
-
             status.innerHTML = response.message;
             status.classList.add('success');
             authForm.reset();
-
             window.location.reload();
-
-
         })
     });
 
     function resetMessages() {
         status.innerHTML = "";
         status.classList.remove('succes', 'error' );
-
         authForm.querySelector('[name="submit"]').value = "Login";
         authForm.querySelector('[name="submit"]').disabled= false;
-
     }
 });
