@@ -31,18 +31,17 @@ new AirDatepicker('#el', {
         return !isDisabledDateIsInRange({date, datepicker});
     },
     onFocus: ({date, datepicker}) => {
-        if (isDisabledDateIsInRange({date, datepicker}) || isEqual(date, disabledDate)) {
-           datepicker.$datepicker.classList.add('-disabled-range-')
-        } else {
-           datepicker.$datepicker.classList.remove('-disabled-range-')
+        if(isDisabledDateIsInRange({date, datepicker}) || isEqual(date, disabledDate)) {
+            datepicker.$datepicker.classList.add('-disabled-range-')
+        }else {
+            datepicker.$datepicker.classList.remove('-disabled-range-')
         }
     },
     onRenderCell: ({date}) => {
-        if (date.toLocaleDateString() === disabledDate.toLocaleDateString()) {
+        if(date.toLocaleDateString() === disabledDate.toLocaleDateString()) {
             return {
                 disabled: true
             }
         }
     }
-
 });
