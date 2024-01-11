@@ -40,3 +40,18 @@ register_deactivation_hook( __FILE__, 'deactivate_zon_packages' );
 if ( class_exists( 'Inc\\Init' ) ) {
 	Inc\Init::registerServices();
 }
+
+
+
+
+/**
+ * Registers the block using the metadata loaded from the `block.json` file.
+ * Behind the scenes, it registers also all assets so they can be enqueued
+ * through the block editor in the corresponding context.
+ *
+ * @see https://developer.wordpress.org/reference/functions/register_block_type/
+ */
+function vbook_vbook_block_init() {
+	register_block_type( __DIR__ . '/build' );
+}
+add_action( 'init', 'vbook_vbook_block_init' );

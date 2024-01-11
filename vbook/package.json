@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "air-datepicker": "^3.4.0"
-  },
 	"name": "vbook",
 	"version": "0.1.0",
 	"description": "Example block scaffolded with Create Block tool.",
@@ -9,7 +6,6 @@
 	"homepage": "wpadroit.com/vbook",
 	"main": "build/index.js",
 	"scripts": {
-    "env": "wp-env",
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
